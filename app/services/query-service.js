@@ -83,13 +83,3 @@
     }
 
 })();
-
-            /*return $http(new_req)
-            .finally(function () {
-                $rootScope.progressbar.complete();
-                if (request.method == 'GET') {
-
-                } else {
-
-                }
-            });;*/
