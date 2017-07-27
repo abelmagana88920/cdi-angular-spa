@@ -12,7 +12,8 @@
             'ngMap',
             'toastr',
             'btford.socket-io',
-            'ngProgress' 
+            'ngProgress',
+            'ui.tinymce' 
         ])
         .config(router);
 
