@@ -1,14 +1,14 @@
-<div class="modal-header bg-primary">
-    <span class="text-uppercase lead">{{ vm.titleHeader }}</span>
-    <button type="button" class="close" ng-click="vm.cancel()" data-dismiss="modal" aria-hidden="true">&times;</button>
-</div>
-<div class="modal-body top-margin-sm">
-    <form name="userForm">
+<form name="userForm" reset-form="vm.data">
+    <div class="modal-header bg-primary">
+        <span class="text-uppercase lead">{{ vm.titleHeader }}</span>
+        <button type="button" class="close" ng-click="vm.cancel()" data-dismiss="modal" aria-hidden="true">&times;</button>
+    </div>
+    <div class="modal-body top-margin-sm">
         <div class="clearfix">
             <div class="col-md-12 materialize">
-
+                
                 <div class="form-group col-md-12">
-                    <input type="text" class="form-control" name="name" ng-model="user.email" placeholder=" " required>
+                    <input type="text" class="form-control" name="name" ng-model="vm.data.email" placeholder=" " required>
                     <label for="name" class="md-label">Full Name</label>
                     <span class="text-red font-10" ng-show="userForm.name.$invalid && vm.submitted">*Required</span>
                 </div>
@@ -24,6 +24,10 @@
                     <label for="company" class="md-label">Company</label>
                     <span class="text-red font-10" ng-show="userForm.company.$invalid && vm.submitted">*Required</span>
                 </div>
+                
+                <div class="clearfix">
+                    <input class="btn btn-default btn-xs pull-right" type="reset" name="Reset Values" />
+                </div>
 
             </div>
         </div> 
@@ -32,5 +36,5 @@
             <button type="button" class="btn btn-default" ng-disabled="vm.disable" ng-click="vm.cancel()">Cancel</button>
             <button type="button" class="btn btn-primary" ng-disabled="vm.disable" ng-click="vm.submitted=true; userForm.$valid && vm.save(vm.data)" >Save &amp; Close</button>
         </div>
-    </form>
-</div>
+    </div>
+</form>
