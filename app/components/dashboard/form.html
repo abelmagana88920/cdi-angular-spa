@@ -24,6 +24,11 @@
                     <label for="company" class="md-label">Company</label>
                     <span class="text-red font-10" ng-show="userForm.company.$invalid && vm.submitted">*Required</span>
                 </div>
+
+                <div class="form-group col-md-12">
+                    <input type="checkbox" ng-model="vm.data.active" name="string" ng-true-value="true" ng-false-value="false" />&nbsp;<label for="active" class="md-label">Active?</label>
+                    <span class="text-red font-10" ng-show="userForm.active.$invalid && vm.submitted">*Required</span>
+                </div>
                 
                 <div class="clearfix">
                     <input class="btn btn-default btn-xs pull-right" type="reset" name="Reset Values" />
