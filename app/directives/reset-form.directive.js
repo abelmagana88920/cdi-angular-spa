@@ -6,12 +6,10 @@
         .directive('resetForm', resetForm);
 
     function resetForm ($parse) {
-        return function( scope, element, attr ) {
-            var fn = $parse( attr.resetForm );
-            var masterModel = angular.copy( fn( scope ) );
-
-            // Error check to see if expression returned a model
-            if ( !fn.assign ) {
+        return function(scope, element, attr) {
+            var fn = $parse(attr.resetForm);
+            var masterModel = angular.copy(fn(scope)); 
+            if (!fn.assign) {
                 throw Error( 'Expression is required to be a model: ' + attr.resetForm );
             }
 
