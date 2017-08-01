@@ -16,8 +16,7 @@
             element.bind( 'reset', function ( event ) { 
 
                 scope.$apply( function () {
-                    fn.assign( scope, angular.copy( masterModel ) );
-                    // scope.form.$setPristine();
+                    fn.assign( scope, angular.copy( masterModel ) ); 
                 }); 
 
                 if ( event.preventDefault ) {

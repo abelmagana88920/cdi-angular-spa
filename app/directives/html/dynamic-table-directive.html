@@ -1,0 +1,23 @@
+<div class="table-responsive">
+    <br />
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Name</th>
+				<th>Username</th>
+				<th>Company</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="user in details">
+				<td ng-bind="user.id"></td>
+				<td ng-bind="user.name"></td>
+				<td ng-bind="user.username"></td>
+				<td ng-bind="user.company.name"></td>
+				<td><a class="btn btn-xs btn-default" ng-click="testYes({data: user})">Try!</a></td>
+			</tr>
+		</tbody>
+	</table>
+</div>

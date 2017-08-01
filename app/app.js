@@ -28,7 +28,7 @@
                 url : '/',
                 views : {
                     'topbar' : { 
-                        templateUrl  : 'app/shared/nav/navbar.html',
+                        templateUrl  : 'app/shared/nav/navbar.html', 
                         controller   : 'NavCtrl',
                         controllerAs : 'vm'  
                     },
@@ -49,6 +49,13 @@
                 url             : 'dashboard',  
                 templateUrl     : 'app/components/dashboard/dashboard.html',
                 controller      : 'DashboardCtrl',
+                controllerAs    : 'vm'
+            })
+
+            .state('app.dynamic-table', {
+                url             : 'dynamic-table',  
+                templateUrl     : 'app/components/dynamic-table/dynamic-table.html',
+                controller      : 'DynamicTableCtrl',
                 controllerAs    : 'vm'
             })
 
