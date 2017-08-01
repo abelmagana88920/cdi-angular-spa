@@ -38,8 +38,8 @@
 
         function init() { 
             // codes to initialize
-            vm.data.email = 'rjill@codedisruptors.com';
-            vm.data.username = 'rjill';
+            vm.data.email = 'user@codedisruptors.com';
+            vm.data.username = 'user';
             vm.data.comp = 'Code Disruptors Inc.';
         }; 
 
