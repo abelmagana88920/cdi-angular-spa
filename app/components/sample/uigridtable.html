@@ -1,0 +1,15 @@
+<span class="title-header-left font-34" ng-bind="vm.titleHeader"></span>
+<div class="col-md-12 top-margin-sm"> 
+    {{vm.gridstate}}
+    <a ng-click="vm.change_test()">Change</a>
+
+    <span ng-repeat="column in vm.gridOptions.columnDefs | filter:{enableHiding:'!false'}">
+        {{column.name | titlecase}}
+        <input type="checkbox" ng-checked="(column.visible)?true:(column.visible===false)?false:true" ng-click="vm.display_test(column)" />
+    </span>
+
+    <div ui-grid="vm.gridOptions" ui-grid-pagination="" ui-grid-pinning ui-grid-resize-columns ui-grid-move-columns ui-grid-save-state   style="height: 400px;"  ></div>
+
+    <pre>{{vm.gridstate | json}}</pre>
+   <!--  <div ui-grid="vm.gridOptions" ui-grid-pagination="" ui-grid-pinning ui-grid-resize-columns ui-grid-move-columns ui-grid-save-state   style="height: 400px;"  ></div> -->
+</div>

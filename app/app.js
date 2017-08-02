@@ -13,7 +13,14 @@
             'toastr',
             'btford.socket-io',
             'ngProgress',
-            'ui.tinymce' 
+            'ui.tinymce',
+            'ui.grid', 
+            'ui.grid.pinning',
+            'ui.grid.pagination',
+            'ui.grid.resizeColumns',
+            'ui.grid.moveColumns',
+            'ui.grid.saveState',
+            'ui.grid.grouping'
         ])
         .config(router);
 
@@ -63,6 +70,13 @@
                 url             : 'directive-dropdown',  
                 templateUrl     : 'app/components/sample/directive-dropdown.html',
                 controller      : 'DirectiveDropdownCtrl',
+                controllerAs    : 'vm'
+            })
+
+            .state('app.uigridtable', {
+                url             : 'uigridtable',  
+                templateUrl     : 'app/components/sample/uigridtable.html',
+                controller      : 'UiGridTableCtrl',
                 controllerAs    : 'vm'
             })
 

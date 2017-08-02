@@ -1,4 +1,13 @@
 var DUMMY = {
+	names: [
+        {first_name: 'Abel', last_name: 'Magana', gender: 'M'},
+        {first_name: 'Mark Lester', last_name: 'Dequina', gender: 'M'},
+        {first_name: 'Rjill Ham', last_name: 'Manuel', gender: 'M'},
+        {first_name: 'Allen', last_name: 'Roberto', gender: 'M'},
+        {first_name: 'Christan', last_name: 'Tecson', gender: 'M'},
+        {first_name: 'Marvin', last_name: 'Zabala', gender: 'M'},
+        {first_name: 'Gabriel', last_name: 'Diamante', gender: 'M'}
+    ],
 	categories : [
 		{
 			id:'C-001',

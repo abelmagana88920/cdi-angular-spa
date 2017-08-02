@@ -56,12 +56,12 @@
             height: 500,
             theme: 'modern',
             external_plugins: {
-                codemirror: "plugins/codemirror/plugin.js"
+                codemirror: "../../extend_components/codemirror/plugin.js"
             },
             codemirror: {
                 indentOnInit: true, // Whether or not to indent code on init.
                 fullscreen: false,   // Default setting is false
-                path: 'codemirror-4.8', // Path to CodeMirror distribution
+                path: '../../bower_components/codemirror', // Path to CodeMirror distribution
                 config: {           // CodeMirror config object
                    mode: 'application/x-httpd-php',
                    lineNumbers: true
@@ -86,7 +86,7 @@
             toolbar1: 'undo redo | insert | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
             toolbar2: 'print preview fontsizeselect media | forecolor backcolor emoticons | codesample help code',
             // fontsize_formats: '8pt 10pt 12pt 14pt 18pt 24pt 36pt',
-            valid_elements: "@[id|class|title|style]," +
+            valid_elements: "@[id|class|title|style|ng-repeat]," +
             "div[class|style],"+
             "strong,em,i,sub,sup,code, span,"+
             "h1,h2,h3,h4,h5,h6,"+
