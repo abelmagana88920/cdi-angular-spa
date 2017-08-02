@@ -1,0 +1,32 @@
+<span class="title-header-left font-34" ng-bind="vm.titleHeader"></span>
+<div class="col-md-12 top-margin-sm"> 
+
+    <script type="text/ng-template" id="categoryTree">
+        <a ng-click="vm.setCategory(category.id)" ng-bind="category.category_name + ' ' + (category.sub_categories.length ? '&raquo;':'') "></a>
+        <ul class="sub-menu dropdown-menu" ng-if="category.sub_categories.length">
+            <li ng-repeat="category in category.sub_categories" ng-include="'categoryTree'"> 
+
+            </li>
+        </ul>
+    </script>
+
+    <ul class="nav">
+          <li class="dropdown"
+            uib-dropdown on-toggle="toggled(open)">
+            <button uib-dropdown-toggle type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+              CATEGORIES <span class="caret"></span>
+            </button>
+
+            <ul class="sub-menu dropdown-menu" style="margin-bottom: 1000px;">
+                <li ng-repeat="category in vm.categories" ng-include="'categoryTree'"></li>
+            </ul> 
+            <div>
+                <span ng-repeat="bc in vm.branch_category">
+                    <span ng-bind="bc.category_name"></span> 
+                    <!-- <span ng-hide="(vm.branch_category.length - 1) == $index"> &raquo; </span> -->
+                </span>
+            </div>
+        </li>
+    </ul>
+    
+</div>

@@ -59,6 +59,13 @@
                 controllerAs    : 'vm'
             })
 
+            .state('app.directive-dropdown', {
+                url             : 'directive-dropdown',  
+                templateUrl     : 'app/components/sample/directive-dropdown.html',
+                controller      : 'DirectiveDropdownCtrl',
+                controllerAs    : 'vm'
+            })
+
             .state('login', {
                 url : '/login',
                 views : {

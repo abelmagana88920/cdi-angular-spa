@@ -25,8 +25,9 @@
     </div>
     <br />
     <form method="post">
-        <textarea ui-tinymce="vm.tinymceOptions" ng-model="vm.tinymceModel"></textarea>
+        <textarea ui-tinymce="vm.tinymceOptions" ng-model="vm.tinymceModel" ng-change="vm.updateHTML()"></textarea>
         <button class="btn btn-xs btn-default" ng-click="vm.getContent()">Get content</button>
         <button class="btn btn-xs btn-default" ng-click="vm.setContent()">Set content</button>
     </form>
+    <div ng-bind-html="vm.tinymceHtml" compile-template></div>
 </div>
